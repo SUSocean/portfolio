@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #F7F7F2;
+}
+
+.welcome-container {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  color: #63A088;
+  font-size: 10rem;
+  font-weight: bold;
+}
