@@ -4,12 +4,28 @@ const Context = createContext()
 
 function ContextProvider(props) {
 
-    const [navOptions, setNavOptions] = useState()
+    function handleMouseEnter(event) {
+        if (event.target.name) {
+            event.target.className = `navigation-container--navigation--nav--link ${event.target.name}`
+        }
+    }
+    function handleMouseLeave(event) {
+        if (event.target.name) {
+            event.target.className = 'navigation-container--navigation--nav--link'
+        }
+    }
+
+
 
     return (
-        <Context.Provider value={'yo'}>
+        <Context.Provider value={
+            {
+                handleMouseEnter: handleMouseEnter,
+                handleMouseLeave: handleMouseLeave
+            }}
+        >
             {props.children}
-        </Context.Provider>
+        </Context.Provider >
     )
 }
 
