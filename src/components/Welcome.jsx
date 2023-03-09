@@ -4,7 +4,7 @@ function Welcome() {
     const welcomeArray = [...'WELCOME']
 
     const WelcomeObj = welcomeArray.map(symbol => {
-        return (<p onMouseEnter={handleEnter} onMouseLeave={handleOExit} key={Math.random()}> {symbol}</p >)
+        return (<span onMouseEnter={handleEnter} onMouseLeave={handleOExit} key={Math.random()}> {symbol}</span >)
     })
 
     function handleEnter(event) {

@@ -8,12 +8,14 @@ body {
   background-color: #F7F7F2;
 }
 
-/* navigation */
+/* start screen- */
 
-.navigation-container {
+.startScreen-container {
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  margin-top: 6rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navigation-container--navigation {
@@ -24,6 +26,11 @@ body {
 
 .navigation-container--navigation--nav {
   position: relative;
+}
+
+.navigation-container--navigation--nav--link:hover {
+  color: #F7F7F2;
+  -webkit-text-stroke: 2px #63A088;
 }
 
 .navigation-container--navigation--nav--link::before {
@@ -37,21 +44,6 @@ body {
   background: #63A088;
 }
 
-.navigation-container--navigation--nav--link.ABOUT::before {
-  display: block;
-  left: 64px;
-}
-
-.navigation-container--navigation--nav--link.WORK::before {
-  display: block;
-  left: 50px;
-}
-
-.navigation-container--navigation--nav--link.CONTACT::before {
-  display: block;
-  left: 42px;
-}
-
 .navigation-container--navigation--nav a {
   text-decoration: none;
   color: #261C15;
@@ -60,10 +52,8 @@ body {
 
 /* welcome */
 .welcome-container {
-  margin: 0 auto;
-  width: 1000px;
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   color: #63A088;
   font-size: 10rem;
   font-weight: bold;
@@ -159,7 +149,6 @@ body {
     -webkit-text-stroke: 20px #F7F7F2;
   }
 }
-
 
 @keyframes openText {
   0% {
