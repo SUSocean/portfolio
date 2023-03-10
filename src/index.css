@@ -3,6 +3,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #F7F7F2;
@@ -18,37 +22,35 @@ body {
   align-items: center;
 }
 
-.navigation-container--navigation {
+.start-screen--navigation-container--navigation {
   display: flex;
   gap: 40px;
   list-style: none;
 }
 
-.navigation-container--navigation--nav {
-  position: relative;
+.start-screen--navigation-container--navigation--nav--link {
+  text-decoration: none;
+  color: #261C15;
 }
 
-.navigation-container--navigation--nav--link:hover {
-  color: #F7F7F2;
-  -webkit-text-stroke: 2px #63A088;
+.start-screen--navigation-container--navigation--nav--link.HOME {
+  font-weight: bold;
 }
 
-.navigation-container--navigation--nav--link::before {
-  display: none;
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 6px;
-  border-radius: 50%;
-  background: #63A088;
+.start-screen--navigation-container--navigation--nav--link:hover {
+  font-weight: bold;
 }
 
-.navigation-container--navigation--nav a {
+.start-screen--navigation-container--navigation--nav {
   text-decoration: none;
   color: #261C15;
   font-size: 2.25rem;
 }
+
+.boba {
+  display: none;
+}
+
 
 /* welcome */
 .welcome-container {
@@ -60,6 +62,16 @@ body {
   -webkit-text-stroke: 20px #63A088;
   text-shadow: -10px -10px 10px #F7F7F2;
 }
+
+/* navigation when scroll */
+
+
+
+
+.whitespace {
+  height: 1000px;
+}
+
 
 /* welcome keyframes */
 

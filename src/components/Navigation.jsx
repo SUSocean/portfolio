@@ -1,22 +1,19 @@
 import React from 'react'
 
 function Navigation() {
-    const navLinks = ['ABOUT', 'WORK', 'CONTACT']
+    const navLinks = ['HOME', 'ABOUT', 'WORK', 'CONTACT']
     const navObj = navLinks.map(link => {
         return (
             <li
-                className={`navigation-container--navigation--nav`}
-                key={link}
-            ><a className='navigation-container--navigation--nav--link'
-                href={`/${link}`}
-            >{`{ ${link} }`}</a></li>
+                className='start-screen--navigation-container--navigation--nav'
+                key={link}>
+                <a href={`#${link}`} className={`start-screen--navigation-container--navigation--nav--link ${link}`}>{link}</a>
+            </li>
         )
     })
-
-
     return (
-        <nav className='navigation-container'>
-            <ul className='navigation-container--navigation'>
+        <nav className='start-screen--navigation-container'>
+            <ul className='start-screen--navigation-container--navigation'>
                 {navObj}
             </ul>
         </nav>
