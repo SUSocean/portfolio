@@ -1,17 +1,20 @@
 import React from 'react'
 
-import Navigation from './components/Navigation'
-import Welcome from "./components//Welcome";
-
+import Home from './components/Home';
+import About from './components/About';
+import Work from './components/Work';
 
 function App() {
+
   return (
     <>
       <div id='HOME' className='startScreen-container'>
-        <Navigation />
-        <Welcome />
+        <Home />
       </div>
-      <div className='whitespace'></div>
+      <main>
+        <About />
+        <Work />
+      </main>
     </>
   )
 }

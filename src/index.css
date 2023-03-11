@@ -12,7 +12,9 @@ body {
   background-color: #F7F7F2;
 }
 
-/* start screen- */
+
+/* HOME */
+
 
 .startScreen-container {
   height: 100vh;
@@ -26,6 +28,7 @@ body {
   display: flex;
   gap: 40px;
   list-style: none;
+  font-size: 3.7rem;
 }
 
 .start-screen--navigation-container--navigation--nav--link {
@@ -44,11 +47,6 @@ body {
 .start-screen--navigation-container--navigation--nav {
   text-decoration: none;
   color: #261C15;
-  font-size: 2.25rem;
-}
-
-.boba {
-  display: none;
 }
 
 
@@ -57,21 +55,11 @@ body {
   display: flex;
   gap: 20px;
   color: #63A088;
-  font-size: 10rem;
-  font-weight: bold;
+  font-size: 15rem;
   -webkit-text-stroke: 20px #63A088;
   text-shadow: -10px -10px 10px #F7F7F2;
+  cursor: default;
 }
-
-/* navigation when scroll */
-
-
-
-
-.whitespace {
-  height: 1000px;
-}
-
 
 /* welcome keyframes */
 
@@ -248,3 +236,49 @@ body {
     -webkit-text-stroke: 20px #63A088;
   }
 }
+
+
+/* ABOUT */
+
+.green-focus {
+  color: #63A088;
+}
+
+.about-container {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.about-container--greetings {
+  padding-top: 100px;
+}
+
+.about-container--greetings p {
+  font-size: 3.37rem;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.about-container--description {
+  margin: 0 auto;
+  margin-top: 150px;
+  max-width: 560px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.about-container--description--tools-headline {
+  margin-top: 100px;
+}
+
+.about-container--description--tools {
+  margin: 0 auto;
+  width: 200px;
+  color: #261C15;
+  display: flex;
+  gap: 20px;
+  font-size: 40px;
+}
+
+/* Work */

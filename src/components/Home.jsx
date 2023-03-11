@@ -1,9 +1,9 @@
 import React from "react";
 
-import Navigation from "./Navigation";
-import Welcome from "./Welcome";
+import Navigation from "./HomeComponents/Navigation";
+import Welcome from "./HomeComponents/Welcome";
 
-function StartScreen() {
+function Home() {
     return (
         <div id="HOME" className='startScreen-container'>
             <Navigation />
@@ -12,4 +12,4 @@ function StartScreen() {
     )
 }
 
-export default StartScreen
+export default Home
