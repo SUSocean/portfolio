@@ -17,13 +17,14 @@ function Navigation() {
     };
 
     const position = getScrollPosition()
+    console.log(position)
     function navStyles() {
         if (position > 60) {
             return {
                 position: 'fixed',
                 right: '100px',
                 top: '25px',
-                fontSize: '1.5rem'
+                fontSize: '1.5rem',
             }
         } else null
     }
@@ -43,17 +44,19 @@ function Navigation() {
                 </li>
                 <li
                     className='start-screen--navigation-container--navigation--nav'
-                    style={position >= 665 ? linkStyles : {}}
+                    style={position < 1514 && position > 664 ? linkStyles : {}}
                     key='2'>
                     <a href='#ABOUT' className='start-screen--navigation-container--navigation--nav--link'>ABOUT</a>
                 </li>
                 <li
                     className='start-screen--navigation-container--navigation--nav'
+                    style={position >= 1514 && position < 2409 ? linkStyles : {}}
                     key='3'>
                     <a href='#WORK' className='start-screen--navigation-container--navigation--nav--link'>WORK</a>
                 </li>
                 <li
                     className='start-screen--navigation-container--navigation--nav'
+                    style={position > 2409 ? linkStyles : {}}
                     key='4'>
                     <a href='#CONTACT' className='start-screen--navigation-container--navigation--nav--link'>CONTACT</a>
                 </li>

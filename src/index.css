@@ -29,6 +29,7 @@ body {
   gap: 40px;
   list-style: none;
   font-size: 3.7rem;
+  z-index: 1;
 }
 
 .start-screen--navigation-container--navigation--nav--link {
@@ -258,7 +259,7 @@ body {
 
 .about-container {
   width: 80%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -285,6 +286,7 @@ body {
 }
 
 .about-container--description--tools {
+  padding-top: 1.5rem;
   margin: 0 auto;
   width: 200px;
   color: #261C15;
@@ -294,3 +296,149 @@ body {
 }
 
 /* Work */
+
+.work-container {
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.work-container--headline {
+  font-size: 3.37rem;
+  font-weight: lighter;
+  align-self: flex-start;
+  margin-bottom: 100px;
+}
+
+
+
+.work-contaienr--table {
+  width: 100%;
+  display: grid;
+  grid-template: 300px 300px / auto;
+  grid-template-areas:
+    'startScreen colorPicker sedona sedona quizical'
+    'startScreen toyStore toyStore watchlist quizical';
+  gap: 15px;
+}
+
+.work-container--project {
+  width: 100%;
+  height: 100%;
+}
+
+.work-container--project--img-hoverer {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #261C15;
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.work-container--project--img-hoverer:hover {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 100%;
+  border-radius: 0;
+  transition: all .3s;
+  filter: brightness(100%);
+}
+
+.work-container--project.Sedona {
+  grid-area: sedona;
+}
+
+.work-container--project.Color {
+  grid-area: colorPicker;
+}
+
+.work-container--project.Quizical {
+  grid-area: quizical;
+}
+
+.work-container--project.Start {
+  grid-area: startScreen;
+}
+
+.work-container--project.Toy {
+  grid-area: toyStore;
+}
+
+.work-container--project.Watchlist {
+  grid-area: watchlist;
+}
+
+
+/* contact */
+
+.contact-container {
+  margin-top: 5rem;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-container--contact-info-wrapper {
+  padding-top: 6rem;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container--contact-info-wrapper--tel,
+.contact-container--contact-info-wrapper--mail {
+  font-size: 3.37rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: #261C15;
+  display: block;
+}
+
+.contact-container--contact-info-wrapper--tel:hover,
+.contact-container--contact-info-wrapper--mail:hover {
+  color: #63A088;
+}
+
+.wave {
+  width: 200%;
+  animation: wave 10s linear infinite alternate;
+  position: absolute;
+  bottom: 0;
+}
+
+.wave2 {
+  z-index: -1;
+  width: 200%;
+  animation: wave2 10s linear infinite alternate;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0%)
+  }
+
+  100% {
+    transform: translateX(-40%)
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    transform: translateX(-40%)
+  }
+
+  100% {
+    transform: translateX(0%)
+  }
+}

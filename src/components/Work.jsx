@@ -4,12 +4,20 @@ import { Context } from './Context'
 
 function Work() {
     const context = useContext(Context)
-    console.log(context[0].mainScreenShotUrl)
+    const Projects = context.map(project => (
+        <Project
+            img={project.mainScreenShotUrl}
+            name={project.name}
+            id={project.id}
+            key={project.name}
+        />
+    ))
     return (
-        <div className="work-container">
-            <Project
-                img={context[0].mainScreenShotUrl}
-            />
+        <div id="WORK" className="work-container">
+            <h1 className="work-container--headline">My <span className="green-focus">Projects</span></h1>
+            <div className="work-contaienr--table">
+                {Projects}
+            </div>
         </div>
     )
 }
