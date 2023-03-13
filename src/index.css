@@ -61,6 +61,18 @@ body {
   cursor: default;
 }
 
+@media (max-width: 1360px) {
+  .welcome-container {
+    font-size: 13rem;
+  }
+}
+
+@media (max-width: 1190px) {
+  .welcome-container {
+    font-size: 10rem;
+  }
+}
+
 /* welcome keyframes */
 
 @keyframes closeText {
