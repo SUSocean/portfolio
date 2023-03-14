@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import Project from "./WorkComponents/Project";
 import { Context } from './Context'
 
-import sedona from '../images/sedona.jpg'
-
 function Work() {
     const context = useContext(Context)
     const Projects = context.map(project => (
