@@ -9,7 +9,7 @@ function ContextProvider(props) {
             id: 'Sedona',
             name: 'Sedona',
             isVerticaltal: false,
-            mainScreenShotUrl: '../images/sedona.jpg',
+            mainScreenShotUrl: '%PUBLIC_URL%/images/sedona.jpg',
             additionalScreenShotUrl: '../images/sedona-options.png',
             tools: ['fa-brands fa-figma', 'fa-brands fa-github', 'fa-brands fa-html5', 'fa-brands fa-css3-alt', 'fa-brands fa-js'],
             description: `This is a website for the Grand Canyon competitor - Sedona. This website has a ‘Home’ page with general information and a “Hotels’ page where you can book a hotel. Hotels selection has various settings that will help you to make the most optimal choise.`,
