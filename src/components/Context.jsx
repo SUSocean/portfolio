@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react"
 
 const Context = createContext()
-import sedonaMain from './images/sedona.jpg'
+import sedonaMain from '/images/sedona.jpg'
 
 function ContextProvider(props) {
 
