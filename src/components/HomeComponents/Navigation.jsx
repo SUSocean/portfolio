@@ -17,7 +17,6 @@ function Navigation() {
     };
 
     const position = getScrollPosition()
-    console.log(position)
     function navStyles() {
         if (position > 60) {
             return {
@@ -40,25 +39,34 @@ function Navigation() {
                     className='start-screen--navigation-container--navigation--nav'
                     style={position < 664 ? linkStyles : {}}
                     key='1'>
-                    <a href='#HOME' className='start-screen--navigation-container--navigation--nav--link'>HOME</a>
+                    <a href='#HOME'
+                        className='start-screen--navigation-container--navigation--nav--link'
+                        title='HOME'
+                    >HOME</a>
                 </li>
                 <li
                     className='start-screen--navigation-container--navigation--nav'
                     style={position < 1514 && position > 664 ? linkStyles : {}}
                     key='2'>
-                    <a href='#ABOUT' className='start-screen--navigation-container--navigation--nav--link'>ABOUT</a>
+                    <a href='#ABOUT' className='start-screen--navigation-container--navigation--nav--link'
+                        title='ABOUT'
+                    >ABOUT</a>
                 </li>
                 <li
                     className='start-screen--navigation-container--navigation--nav'
                     style={position >= 1514 && position < 2409 ? linkStyles : {}}
                     key='3'>
-                    <a href='#WORK' className='start-screen--navigation-container--navigation--nav--link'>WORK</a>
+                    <a href='#WORK' className='start-screen--navigation-container--navigation--nav--link'
+                        title='WORK'
+                    >WORK</a>
                 </li>
                 <li
                     className='start-screen--navigation-container--navigation--nav'
                     style={position > 2409 ? linkStyles : {}}
                     key='4'>
-                    <a href='#CONTACT' className='start-screen--navigation-container--navigation--nav--link'>CONTACT</a>
+                    <a href='#CONTACT' className='start-screen--navigation-container--navigation--nav--link'
+                        title='CONTACT'
+                    >CONTACT</a>
                 </li>
             </ul>
         </nav>

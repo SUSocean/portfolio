@@ -3,6 +3,7 @@ import React from "react"
 function Contact() {
     return (
         <div id="CONTACT" className="contact-container">
+            <h1 className="contact-container-headline">MY <span className="green-focus">CONTACTS:</span> </h1>
             <div className="contact-container--contact-info-wrapper">
                 <a href='tel:0877957502' className="contact-container--contact-info-wrapper--tel">0 877-957-502</a>
                 <a href="mailto:igonind.a1@gmail.com" className="contact-container--contact-info-wrapper--mail">igonind.a1@gmail.com</a>

@@ -12,6 +12,13 @@ body {
   background-color: #F7F7F2;
 }
 
+.capital {
+  text-transform: uppercase;
+}
+
+.green-focus {
+  color: #63A088;
+}
 
 /* HOME */
 
@@ -35,6 +42,16 @@ body {
 .start-screen--navigation-container--navigation--nav--link {
   text-decoration: none;
   color: #261C15;
+  text-shadow: 0px 0px 1px #F7F7F2;
+}
+
+.start-screen--navigation-container--navigation--nav--link::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .start-screen--navigation-container--navigation--nav--link.HOME {
@@ -253,9 +270,6 @@ body {
 
 /* ABOUT */
 
-.green-focus {
-  color: #63A088;
-}
 
 .about-container {
   width: 80%;
@@ -277,7 +291,7 @@ body {
   margin: 0 auto;
   margin-top: 150px;
   max-width: 560px;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 36px;
 }
 
@@ -293,6 +307,18 @@ body {
   display: flex;
   gap: 20px;
   font-size: 40px;
+}
+
+.fa-gears {
+  position: relative;
+}
+
+.fa-gears::after {
+  content: 'api';
+  font-size: 0.7rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* Work */
@@ -313,8 +339,6 @@ body {
   align-self: flex-start;
   margin-bottom: 100px;
 }
-
-
 
 .work-contaienr--table {
   width: 100%;
@@ -377,6 +401,110 @@ body {
   grid-area: watchlist;
 }
 
+/* project */
+
+.project-container {
+  /* height: 100vh; */
+  padding: 50px;
+}
+
+.project-container-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-container-navigation--name {
+  font-size: 3.37rem;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.project-container--navigation--go-back-link {
+  text-decoration: none;
+}
+
+.project-container--navigation--go-back-link:hover {
+  font-weight: bold;
+}
+
+.project-container--navigation--go-back-link p {
+  font-size: 1.5rem;
+  color: #261C15;
+  margin: 0;
+}
+
+.project-container--content {
+  margin-top: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-container--content--images {
+  display: grid;
+  width: 45%;
+  height: 100%;
+  gap: 20px;
+}
+
+.project-container--content--images img {
+  width: 100%;
+  box-shadow: 0 0 5px #261C15;
+}
+
+.project-container--content--info {
+  width: 45%;
+  height: 100%;
+  display: grid;
+  grid-template: auto 100px auto 100px auto / auto auto auto;
+  grid-template-areas: '. tools .'
+    '. . .'
+    'description description description'
+    '. . .'
+    'code . site';
+}
+
+.project-container--content--info--tools {
+  grid-area: tools;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  gap: 20px;
+}
+
+.project-container--content--info--description {
+  line-height: 1.5em;
+  grid-area: description;
+  font-size: 2rem;
+}
+
+.project-container--content--info--link-code,
+.project-container--content--info--link-site {
+  grid-area: code;
+  text-decoration: none;
+  color: #63A088;
+  font-size: 3rem;
+}
+
+.project-container--content--info--link-site {
+  grid-area: site;
+  justify-self: end;
+}
+
+.project-container--content--info--link-site::before,
+.project-container--content--info--link-code::before,
+.project-container--navigation--go-back-link p::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.project-container--content--info--link-code:hover,
+.project-container--content--info--link-site:hover {
+  font-weight: bold;
+}
 
 /* contact */
 
@@ -385,6 +513,12 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+}
+
+.contact-container-headline {
+  font-size: 3.37rem;
+  font-weight: lighter;
+  margin-left: 100px;
 }
 
 .contact-container--contact-info-wrapper {
@@ -410,7 +544,7 @@ body {
 
 .wave {
   width: 200%;
-  animation: wave 10s linear infinite alternate;
+  animation: wave 20s linear infinite alternate;
   position: absolute;
   bottom: 0;
 }
@@ -418,7 +552,7 @@ body {
 .wave2 {
   z-index: -1;
   width: 200%;
-  animation: wave2 10s linear infinite alternate;
+  animation: wave2 20s linear infinite alternate;
   position: absolute;
   bottom: 0;
 }
