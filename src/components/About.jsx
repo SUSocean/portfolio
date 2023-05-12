@@ -21,7 +21,6 @@ function About() {
                     <i className="fa-brands fa-js"></i>
                     <i className="fa-brands fa-react"></i>
                     <i className="fa-solid fa-gears"></i>
-                    <img className="about-container--description--tools--nextjs" src="../images/next-js-icon.png" alt="nextJS logo" />
                 </div>
             </div>
         </div>
